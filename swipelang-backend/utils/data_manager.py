@@ -6,7 +6,8 @@ import pandas as pd
 def load_slang_data():
     base_dir = os.path.dirname(os.path.abspath(__file__))
     csv_path = os.path.join(base_dir, '..', 'slang_data', 'slang_list.csv')
-    return pd.read_csv(csv_path)
+    df = pd.read_csv(csv_path)
+    return df.to_dict(orient='records')
 
 def load_user_history():
     if not os.path.exists('storage/user_history.json'):
