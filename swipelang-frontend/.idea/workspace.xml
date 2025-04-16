@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="79e9bef1-4097-4773-9b0c-8ccdf4ef595e" name="변경" comment="📦 프론트엔드 전체 파일 포함하여 정식 푸시">
+      <change beforePath="$PROJECT_DIR$/../swipelang4/swipelang-backend" beforeDir="false" afterPath="$PROJECT_DIR$/../swipelang4/swipelang-backend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../swipelang4/swipelang-frontend" beforeDir="false" afterPath="$PROJECT_DIR$/../swipelang4/swipelang-frontend" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../swipelang4" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "StrongYoon"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/StrongYoon/Swipelang-Final.git",
+    "accountId": "f9f4c5f6-7ce7-4692-b515-3ce6d8684e08"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2vnKCSmZncIwqqhFyfnrRKAnsf0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/Python/swipelang4",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PyCharm 2024.2.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": []
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PY-243.21565.199" />
+        <option value="bundled-python-sdk-cab1f2013843-4ae2d6a61b08-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.21565.199" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="79e9bef1-4097-4773-9b0c-8ccdf4ef595e" name="변경" comment="" />
+      <created>1744775270062</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1744775270062</updated>
+      <workItem from="1744775271103" duration="591000" />
+      <workItem from="1744776526009" duration="684000" />
+      <workItem from="1744777670192" duration="4645000" />
+      <workItem from="1744794482147" duration="13285000" />
+      <workItem from="1744812215319" duration="2913000" />
+    </task>
+    <task id="LOCAL-00001" summary="12">
+      <option name="closed" value="true" />
+      <created>1744814665593</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744814665593</updated>
+    </task>
+    <task id="LOCAL-00002" summary="12">
+      <option name="closed" value="true" />
+      <created>1744814787506</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1744814787506</updated>
+    </task>
+    <task id="LOCAL-00003" summary="📦 프론트엔드 전체 파일 포함하여 정식 푸시">
+      <option name="closed" value="true" />
+      <created>1744815336606</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1744815336606</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="12" />
+    <MESSAGE value=" 프론트엔드 전체 파일 포함하여 정식 푸시" />
+    <option name="LAST_COMMIT_MESSAGE" value=" 프론트엔드 전체 파일 포함하여 정식 푸시" />
+  </component>
+</project>
