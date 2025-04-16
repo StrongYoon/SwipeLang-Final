@@ -88,7 +88,7 @@
       <workItem from="1744777639944" duration="625000" />
       <workItem from="1744800967058" duration="2162000" />
       <workItem from="1744812432232" duration="4599000" />
-      <workItem from="1744817780774" duration="2417000" />
+      <workItem from="1744817780774" duration="2517000" />
     </task>
     <task id="LOCAL-00001" summary="🚀 Flask 백엔드 초기 커밋">
       <option name="closed" value="true" />
@@ -322,7 +322,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744821032031</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="🚀 SwipeLang 최종 구조 정리 푸시">
+      <option name="closed" value="true" />
+      <created>1744821300436</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1744821300436</updated>
+    </task>
+    <task id="LOCAL-00031" summary="🚀 SwipeLang 최종 구조 정리 푸시">
+      <option name="closed" value="true" />
+      <created>1744821315130</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1744821315130</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
