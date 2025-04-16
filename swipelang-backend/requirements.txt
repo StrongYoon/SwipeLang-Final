@@ -3,3 +3,4 @@ gtts==2.3.2
 numpy
 pandas
 flask-cors
+gunicorn

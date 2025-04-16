@@ -1,0 +1,59 @@
+/* src/components/SwipeCard.css */
+
+.swipe-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px;
+  padding: 20px;
+}
+
+.card {
+  width: 330px;
+  padding: 32px;
+  background-color: #e8fdf1;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 128, 96, 0.15);
+  text-align: center;
+  transition: all 0.4s ease;
+  font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+}
+
+.slang-phrase {
+  font-size: 26px;
+  font-weight: 600;
+  color: #1e4d2b;
+  margin-bottom: 20px;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.action-btn {
+  padding: 8px 16px;
+  font-size: 15px;
+  border-radius: 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.action-btn:hover {
+  background-color: #388e3c;
+}
+
+.meaning {
+  margin-top: 20px;
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #d0e8d0;
+  color: #333;
+  text-align: left;
+}

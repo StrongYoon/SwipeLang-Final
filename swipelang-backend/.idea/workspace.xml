@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa21192e-1084-4afa-8750-17dac021a2bc" name="변경" comment="📦 프론트엔드 전체 파일 포함하여 정식 푸시">
-      <change beforePath="$PROJECT_DIR$" beforeDir="false" afterPath="$PROJECT_DIR$" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../swipelang-frontend" beforeDir="false" afterPath="$PROJECT_DIR$/../swipelang-frontend" afterDir="false" />
+    <list default="true" id="aa21192e-1084-4afa-8750-17dac021a2bc" name="변경" comment="🚀 SwipeLang 최종 구조 정리 푸시">
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +36,12 @@
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="f9f4c5f6-7ce7-4692-b515-3ce6d8684e08" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/StrongYoon/Swipelang-Final.git",
-    "accountId": "f9f4c5f6-7ce7-4692-b515-3ce6d8684e08"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/StrongYoon/Swipelang-Final.git&quot;,
+    &quot;accountId&quot;: &quot;f9f4c5f6-7ce7-4692-b515-3ce6d8684e08&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -58,7 +57,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/Python/swipelang4",
+    "last_opened_file_path": "D:/Python/swipelang4/swipelang-backend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -89,6 +88,7 @@
       <workItem from="1744777639944" duration="625000" />
       <workItem from="1744800967058" duration="2162000" />
       <workItem from="1744812432232" duration="4599000" />
+      <workItem from="1744817780774" duration="2151000" />
     </task>
     <task id="LOCAL-00001" summary="🚀 Flask 백엔드 초기 커밋">
       <option name="closed" value="true" />
@@ -306,7 +306,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744815402269</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="🚀 SwipeLang 최종 구조 정리 푸시">
+      <option name="closed" value="true" />
+      <created>1744818084580</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1744818084580</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,7 +345,9 @@
     <MESSAGE value=" 중복 실행 제거 및 최종 Flask 구조" />
     <MESSAGE value=" swipelang1 통합 구조 최초 푸시" />
     <MESSAGE value=" 프론트엔드 전체 파일 포함하여 정식 푸시" />
-    <option name="LAST_COMMIT_MESSAGE" value=" 프론트엔드 전체 파일 포함하여 정식 푸시" />
+    <MESSAGE value="1" />
+    <MESSAGE value=" SwipeLang 최종 구조 정리 푸시" />
+    <option name="LAST_COMMIT_MESSAGE" value=" SwipeLang 최종 구조 정리 푸시" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SwipeLang30$app.coverage" NAME="app 커버리지 결과" MODIFIED="1744769297179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
