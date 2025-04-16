@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import { motion, AnimatePresence } from 'framer-motion';
 import './SwipeCard.css';
-import axios from 'axios';
 
 const SwipeCard = ({ slang, onSwipe, onSwiped }) => {
   const [showMeaning, setShowMeaning] = useState(false);
@@ -48,11 +47,13 @@ const SwipeCard = ({ slang, onSwipe, onSwiped }) => {
             exit={{ x: direction === 'left' ? -200 : 200, opacity: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <h2 className="slang-phrase">{slang.phrase}</h2>
+            <h2 className="slang-phrase">💬 {slang.phrase}</h2>
 
             <div className="btn-row">
               <button className="action-btn" onClick={handleTTS}>🔊 발음 듣기</button>
-              <button className="action-btn" onClick={() => setShowMeaning(!showMeaning)}>📖 해석 보기</button>
+              <button className="action-btn" onClick={() => setShowMeaning(!showMeaning)}>
+                📖 해석 보기
+              </button>
             </div>
 
             {showMeaning && (

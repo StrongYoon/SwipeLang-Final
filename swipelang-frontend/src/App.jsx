@@ -76,38 +76,43 @@ const App = () => {
   }
 
   return (
-    <div className="App" style={{ textAlign: 'center', padding: '20px' }}>
-      <h1>📚 SwipeLang</h1>
-      <LevelBadge count={knownSlangs.length} />
-      <StatsPanel known={knownSlangs.length} review={reviewSlangs.length} />
+      <div className="App" style={{
+          backgroundColor: '#f0faf7',
+          minHeight: '100vh',
+          padding: '30px',
+          textAlign: 'center'
+      }}>
+          <h1>📚 SwipeLang</h1>
+          <LevelBadge count={knownSlangs.length}/>
+          <StatsPanel known={knownSlangs.length} review={reviewSlangs.length}/>
 
-      {quizMode ? (
-        <QuizMode knownSlangs={knownSlangs} onExit={() => setQuizMode(false)} />
-      ) : reviewMode ? (
-        <ReviewMode reviewSlangs={reviewSlangs} onExit={() => setReviewMode(false)} />
-      ) : (
-        <div>
-          {slangs.length > 0 && (
-            <SwipeCard
-              slang={slangs[0]}
-              onSwipe={handleSwipe}
-              onSwiped={fetchNextSlang}
-            />
+          {quizMode ? (
+              <QuizMode knownSlangs={knownSlangs} onExit={() => setQuizMode(false)}/>
+          ) : reviewMode ? (
+              <ReviewMode reviewSlangs={reviewSlangs} onExit={() => setReviewMode(false)}/>
+          ) : (
+              <div>
+                  {slangs.length > 0 && (
+                      <SwipeCard
+                          slang={slangs[0]}
+                          onSwipe={handleSwipe}
+                          onSwiped={fetchNextSlang}
+                      />
+                  )}
+                  <div style={{marginTop: '20px'}}>
+                      <button onClick={() => setQuizMode(true)} style={{marginRight: '10px'}}>
+                          🧠 퀴즈 모드
+                      </button>
+                      <button onClick={() => setReviewMode(true)} style={{marginRight: '10px'}}>
+                          🔁 복습 모드
+                      </button>
+                  </div>
+              </div>
           )}
-          <div style={{ marginTop: '20px' }}>
-            <button onClick={() => setQuizMode(true)} style={{ marginRight: '10px' }}>
-              🧠 퀴즈 모드
-            </button>
-            <button onClick={() => setReviewMode(true)} style={{ marginRight: '10px' }}>
-              🔁 복습 모드
-            </button>
-          </div>
-        </div>
-      )}
 
-      <AddSlangForm onSuccess={fetchStats} />
-      <DownloadButton knownSlangs={knownSlangs} reviewSlangs={reviewSlangs} />
-    </div>
+          <AddSlangForm onSuccess={fetchStats}/>
+          <DownloadButton knownSlangs={knownSlangs} reviewSlangs={reviewSlangs}/>
+      </div>
   );
 };
 
