@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa21192e-1084-4afa-8750-17dac021a2bc" name="변경" comment="🧹 render.yaml 제거 → Render UI 설정 적용" />
+    <list default="true" id="aa21192e-1084-4afa-8750-17dac021a2bc" name="변경" comment="🧹 render.yaml 제거 → Render UI 설정 적용">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,22 +51,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.app.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/Python/swipelang4/swipelang-backend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Python/swipelang4/swipelang-backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -87,6 +89,7 @@
       <workItem from="1744800967058" duration="2162000" />
       <workItem from="1744812432232" duration="4599000" />
       <workItem from="1744817780774" duration="4292000" />
+      <workItem from="1744825565814" duration="2547000" />
     </task>
     <task id="LOCAL-00001" summary="🚀 Flask 백엔드 초기 커밋">
       <option name="closed" value="true" />
@@ -384,7 +387,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744823123814</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="🧹 render.yaml 제거 → Render UI 설정 적용">
+      <option name="closed" value="true" />
+      <created>1744831941751</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1744831941751</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,6 +428,7 @@
     <MESSAGE value=" 프론트엔드 전체 파일 포함하여 정식 푸시" />
     <MESSAGE value="1" />
     <MESSAGE value=" SwipeLang 최종 구조 정리 푸시" />
+    <MESSAGE value=" render.yaml 제거 → Render UI 설정 적용" />
     <MESSAGE value=" render.yaml 제거 → Render UI 설정 적용" />
     <option name="LAST_COMMIT_MESSAGE" value=" render.yaml 제거 → Render UI 설정 적용" />
   </component>

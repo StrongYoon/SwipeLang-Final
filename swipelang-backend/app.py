@@ -8,7 +8,7 @@ import os
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, origins="*")
+CORS(app, origins=["https://www.swipelang.com"])
 
 # 데이터 불러오기
 slangs = load_slang_data()
