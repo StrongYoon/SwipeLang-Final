@@ -8,7 +8,7 @@ import os
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, origins=["https://www.swipelang.com"])
+CORS(app, resources={r"/*": {"origins": "https://www.swipelang.com"}}, supports_credentials=True)
 
 # 데이터 불러오기
 slangs = load_slang_data()
@@ -99,7 +99,14 @@ def tts():
     mp3_data = speak(phrase)
     return send_file(io.BytesIO(mp3_data), mimetype="audio/mpeg")
 
-# ✅ 딱 이 부분만 남기고!
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
+@app.route("/debug")
+def debug():
+    return jsonify({
+        "총 슬랭 수": len(slangs),
+        "예시": slangs[:3],
+        "오늘 viewed 수": len(history.get(today, {}).get("viewed", []))
+    })
