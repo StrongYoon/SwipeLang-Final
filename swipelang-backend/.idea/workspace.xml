@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa21192e-1084-4afa-8750-17dac021a2bc" name="변경" comment="🚀 SwipeLang 최종 구조 정리 푸시">
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/data_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/data_manager.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +88,7 @@
       <workItem from="1744777639944" duration="625000" />
       <workItem from="1744800967058" duration="2162000" />
       <workItem from="1744812432232" duration="4599000" />
-      <workItem from="1744817780774" duration="2151000" />
+      <workItem from="1744817780774" duration="2417000" />
     </task>
     <task id="LOCAL-00001" summary="🚀 Flask 백엔드 초기 커밋">
       <option name="closed" value="true" />
@@ -314,7 +314,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744818084580</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="🚀 SwipeLang 최종 구조 정리 푸시">
+      <option name="closed" value="true" />
+      <created>1744821032031</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1744821032031</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

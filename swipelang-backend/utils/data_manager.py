@@ -4,8 +4,9 @@ from datetime import datetime
 import pandas as pd
 
 def load_slang_data():
-    df = pd.read_csv('slang_data/slang_list.csv')
-    return df.to_dict(orient='records')  # [{...}, {...}, ...]
+    base_dir = os.path.dirname(__file__)
+    csv_path = os.path.join(base_dir, '..', 'slang_data', 'slang_list.csv')
+    return pd.read_csv(csv_path)
 
 def load_user_history():
     if not os.path.exists('storage/user_history.json'):
