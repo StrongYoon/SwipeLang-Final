@@ -32,6 +32,11 @@ def get_today_slang():
         history[today] = {"known": [], "review": [], "viewed": []}
 
     viewed = history[today].get("viewed", [])
+
+    print("🧪 전체 슬랭 개수:", len(slangs))
+    print("🧪 viewed 개수:", len(viewed))
+    print("🧪 available 개수:", len([s for s in slangs if s.get("phrase") not in viewed]))
+
     available = [s for s in slangs if s.get("phrase") not in viewed]
 
     if not available:
