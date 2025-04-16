@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa21192e-1084-4afa-8750-17dac021a2bc" name="변경" comment="🧹 render.yaml 제거 → Render UI 설정 적용">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +89,7 @@
       <workItem from="1744800967058" duration="2162000" />
       <workItem from="1744812432232" duration="4599000" />
       <workItem from="1744817780774" duration="4292000" />
-      <workItem from="1744825565814" duration="3082000" />
+      <workItem from="1744825565814" duration="3834000" />
     </task>
     <task id="LOCAL-00001" summary="🚀 Flask 백엔드 초기 커밋">
       <option name="closed" value="true" />
@@ -396,7 +395,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744831941751</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="🧹 render.yaml 제거 → Render UI 설정 적용">
+      <option name="closed" value="true" />
+      <created>1744833921351</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1744833921351</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
