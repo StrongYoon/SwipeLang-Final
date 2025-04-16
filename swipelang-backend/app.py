@@ -26,11 +26,14 @@ def index():
 
 @app.route("/slang/today")
 def get_today_slang():
-    available = [s for s in slangs if s["phrase"] not in history[today]["viewed"]]
+    viewed = history.get(today, {}).get("viewed", [])
+    available = [s for s in slangs if s.get("phrase") not in viewed]
+
     if not available:
         return jsonify({"message": "오늘 학습 가능한 슬랭이 없습니다."}), 404
+
     current = random.choice(available)
-    history[today]["viewed"].append(current["phrase"])
+    history.setdefault(today, {}).setdefault("viewed", []).append(current["phrase"])
     save_user_history(history)
     return jsonify(current)
 
