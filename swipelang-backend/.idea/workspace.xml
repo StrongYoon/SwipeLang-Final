@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa21192e-1084-4afa-8750-17dac021a2bc" name="변경" comment="🚀 SwipeLang 최종 구조 정리 푸시">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/render.yaml" beforeDir="false" />
-    </list>
+    <list default="true" id="aa21192e-1084-4afa-8750-17dac021a2bc" name="변경" comment="🧹 render.yaml 제거 → Render UI 설정 적용" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,7 +86,7 @@
       <workItem from="1744777639944" duration="625000" />
       <workItem from="1744800967058" duration="2162000" />
       <workItem from="1744812432232" duration="4599000" />
-      <workItem from="1744817780774" duration="2609000" />
+      <workItem from="1744817780774" duration="4292000" />
     </task>
     <task id="LOCAL-00001" summary="🚀 Flask 백엔드 초기 커밋">
       <option name="closed" value="true" />
@@ -347,7 +344,47 @@
       <option name="project" value="LOCAL" />
       <updated>1744821399426</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="🚀 SwipeLang 최종 구조 정리 푸시">
+      <option name="closed" value="true" />
+      <created>1744821496119</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1744821496119</updated>
+    </task>
+    <task id="LOCAL-00034" summary="🚀 SwipeLang 최종 구조 정리 푸시">
+      <option name="closed" value="true" />
+      <created>1744821998915</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1744821998915</updated>
+    </task>
+    <task id="LOCAL-00035" summary="🚀 SwipeLang 최종 구조 정리 푸시">
+      <option name="closed" value="true" />
+      <created>1744822469401</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1744822469401</updated>
+    </task>
+    <task id="LOCAL-00036" summary="🚀 SwipeLang 최종 구조 정리 푸시">
+      <option name="closed" value="true" />
+      <created>1744822480285</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1744822480285</updated>
+    </task>
+    <task id="LOCAL-00037" summary="🧹 render.yaml 제거 → Render UI 설정 적용">
+      <option name="closed" value="true" />
+      <created>1744823123814</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1744823123814</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,7 +417,8 @@
     <MESSAGE value=" 프론트엔드 전체 파일 포함하여 정식 푸시" />
     <MESSAGE value="1" />
     <MESSAGE value=" SwipeLang 최종 구조 정리 푸시" />
-    <option name="LAST_COMMIT_MESSAGE" value=" SwipeLang 최종 구조 정리 푸시" />
+    <MESSAGE value=" render.yaml 제거 → Render UI 설정 적용" />
+    <option name="LAST_COMMIT_MESSAGE" value=" render.yaml 제거 → Render UI 설정 적용" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SwipeLang30$app.coverage" NAME="app 커버리지 결과" MODIFIED="1744769297179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
