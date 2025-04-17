@@ -95,9 +95,9 @@ const App = () => {
       margin: '0 auto'
     }}>
       <h1 style={{fontSize: '2.2rem', marginBottom: '5px'}}>📚 SwipeLang</h1>
-      <PetStatus count={knownSlangs.length} />
-      <LevelBadge count={knownSlangs.length} />
-      <StatsPanel known={knownSlangs.length} review={reviewSlangs.length} />
+      <PetStatus knowncount={knownSlangs.length} />
+      <LevelBadge knowncount={knownSlangs.length} />
+      <StatsPanel knowncount={knownSlangs.length} review={reviewSlangs.length} />
 
       {quizMode ? (
         <QuizMode knownSlangs={knownSlangs} onExit={() => setQuizMode(false)} />
