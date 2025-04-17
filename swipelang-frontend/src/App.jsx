@@ -54,13 +54,23 @@ const App = () => {
       .catch((err) => console.error('학습 기록 불러오기 실패:', err));
   };
 
-  useEffect(() => {
-  setLoading(true); // 슬랭 불러오기 전
-  fetchInitialSlangs();
-  fetchStats();
-  setLoading(false); // 슬랭 도착 후 바로 해제
-}, [nickname]);
+useEffect(() => {
+  setLoading(true);
 
+  Promise.all([
+    Promise.all(
+      Array.from({ length: 5 }, () =>
+        axios.get('https://swipelang-server4.onrender.com/slang/today').then(res => res.data)
+      ).then(results => setSlangs(results))
+    ),
+    axios
+      .get(`https://swipelang-server4.onrender.com/stats?nickname=${nickname}`)
+      .then((res) => {
+        setKnownSlangs(res.data.known || []);
+        setReviewSlangs(res.data.review || []);
+      })
+  ]).finally(() => setLoading(false));
+}, [nickname]);
 
   const handleSwipe = (direction, phrase) => {
     console.log(`👉 ${direction} swipe on "${phrase}"`);
