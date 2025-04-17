@@ -90,10 +90,12 @@ const App = () => {
       backgroundColor: '#f0faf7',
       minHeight: '100vh',
       padding: '30px',
-      textAlign: 'center'
+      textAlign: 'center',
+      maxWidth: '480px',       // 👈 최대 너비 제한 (1/3 정도)
+      margin: '0 auto'
     }}>
-      <h1>📚 SwipeLang</h1>
-      <TreeStatus count={knownSlangs.length} />
+      <h1 style={{fontSize: '2rem', marginBottom: '5px'}}>📚 SwipeLang</h1>
+      <TreeStatus count={knownSlangs.length}/>
       <LevelBadge count={knownSlangs.length} />
       <StatsPanel known={knownSlangs.length} review={reviewSlangs.length} />
 

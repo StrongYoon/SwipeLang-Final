@@ -42,9 +42,14 @@ const SwipeCard = ({ slang, onSwipe, onSwiped }) => {
         {!swiped && (
           <motion.div
             className="card"
-            initial={{ x: 0, opacity: 1 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: direction === 'left' ? -200 : 200, opacity: 0 }}
+            initial={{ x: 3, opacity: 1, rotate: 3 }}
+            animate={{ x: 3, opacity: 1, rotate: 3 }}
+            exit={{
+              x: direction === 'left' ? -400 : 400,
+              opacity: 0,
+              rotate: direction === 'left' ? -15 : 15,
+              scale: 0.5
+            }}
             transition={{ duration: 0.4 }}
           >
             <h2 className="slang-phrase">💬 {slang.phrase}</h2>
