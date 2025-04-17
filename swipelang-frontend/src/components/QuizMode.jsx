@@ -12,7 +12,7 @@ const QuizMode = ({ knownSlangs, onExit }) => {
     const picked = shuffled.slice(0, 5);
     const quizzes = picked.map((slang) => {
       const choices = [slang.meaning];
-      while (choices.length < 4) {
+      while (choices.length < 0) {
         const random = knownSlangs[Math.floor(Math.random() * knownSlangs.length)];
         if (!choices.includes(random.meaning)) {
           choices.push(random.meaning);

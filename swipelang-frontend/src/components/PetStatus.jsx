@@ -1,7 +1,7 @@
 // src/components/PetStatus.jsx
 import React, { useEffect, useState } from 'react';
 
-const PetStatus = ({ knownCount }) => {
+const PetStatus = ({ knowncount }) => {
   const [daysInactive, setDaysInactive] = useState(0);
 
   // 마지막 접속일 확인
@@ -22,20 +22,20 @@ const PetStatus = ({ knownCount }) => {
   }, []);
 
   // 성장 단계 (1~10)
-  const getStage = (count) => {
-    if (count >= 2700) return 10;
-    if (count >= 2400) return 9;
-    if (count >= 2100) return 8;
-    if (count >= 1800) return 7;
-    if (count >= 1500) return 6;
-    if (count >= 1200) return 5;
-    if (count >= 900) return 4;
-    if (count >= 600) return 3;
-    if (count >= 300) return 2;
+  const getStage = (knowncount) => {
+    if (knowncount >= 2700) return 10;
+    if (knowncount >= 2400) return 9;
+    if (knowncount >= 2100) return 8;
+    if (knowncount >= 1800) return 7;
+    if (knowncount >= 1500) return 6;
+    if (knowncount >= 1200) return 5;
+    if (knowncount >= 900) return 4;
+    if (knowncount >= 600) return 3;
+    if (knowncount >= 300) return 2;
     return 1;
   };
 
-  const stage = getStage(knownCount);
+  const stage = getStage(knowncount);
 
   // 이미지 경로 결정
   let petImage = `/images/pet/pet_stage${stage}.png`;

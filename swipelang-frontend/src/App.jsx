@@ -73,10 +73,9 @@ const App = () => {
 
     axios
       .post(`https://swipelang-server4.onrender.com${url}`, { phrase, nickname })
-      .then(() => {
-        console.log(`${direction === 'right' ? '기억 완료' : '복습 등록'}됨`);
-        fetchStats();
-        fetchNextSlang();  // 🔄 다음 카드 자동 로드
+      .then(async () => {
+        await fetchStats();        // 서버에서 최신 통계 받아오기
+        fetchNextSlang();          // 그런 다음 다음 카드 불러오기
       })
       .catch((err) => console.error('스와이프 처리 실패:', err));
   };
@@ -86,50 +85,70 @@ const App = () => {
   }
 
   return (
-    <div className="App" style={{
-      backgroundColor: '#f0faf7',
-      minHeight: '100vh',
-      padding: '30px',
-      textAlign: 'center',
-      maxWidth: '600px',       // 👈 최대 너비 제한 (1/3 정도)
-      margin: '0 auto'
-    }}>
-      <h1 style={{fontSize: '2.2rem', marginBottom: '5px'}}>📚 SwipeLang</h1>
-      <PetStatus knowncount={knownSlangs.length} />
-      <LevelBadge knowncount={knownSlangs.length} />
-      <StatsPanel knowncount={knownSlangs.length} review={reviewSlangs.length} />
+  <div className="App" style={{
+    backgroundColor: '#f0faf7',
+    minHeight: '100vh',
+    padding: '30px',
+    textAlign: 'center',
+    maxWidth: '600px',
+    margin: '0 auto'
+  }}>
+    <h1 style={{ fontSize: '2.2rem', marginBottom: '5px' }}>📚 SwipeLang</h1>
+    <PetStatus knowncount={knownSlangs.length} />
+    <LevelBadge knowncount={knownSlangs.length} />
+    <StatsPanel knowncount={knownSlangs.length} review={reviewSlangs.length} />
 
-      {quizMode ? (
-        <QuizMode knownSlangs={knownSlangs} onExit={() => setQuizMode(false)} />
-      ) : reviewMode ? (
-        <ReviewMode reviewSlangs={reviewSlangs} onExit={() => setReviewMode(false)} />
-      ) : (
-        <div>
-          {loading ? (
-            <p style={{ fontSize: '1.2rem', color: '#888' }}>⏳ 슬랭 불러오는 중...</p>
-          ) : (
-            slangs.length > 0 && (
-              <SwipeCard
-                slang={slangs[0]}
-                onSwipe={handleSwipe}
-                onSwiped={fetchNextSlang}
-              />
-            )
-          )}
-          <div style={{ marginTop: '20px' }}>
-            <button onClick={() => setQuizMode(true)} style={{ marginRight: '10px' }}>
-              🧠 퀴즈 모드
-            </button>
-            <button onClick={() => setReviewMode(true)} style={{ marginRight: '10px' }}>
-              🔁 복습 모드
-            </button>
-          </div>
+    {quizMode ? (
+      <QuizMode
+        knownSlangs={knownSlangs}
+        onExit={() => {
+          setQuizMode(false);
+          fetchInitialSlangs();
+        }}
+      />
+    ) : reviewMode ? (
+      <ReviewMode
+        reviewSlangs={reviewSlangs}
+        onExit={() => setReviewMode(false)}
+      />
+    ) : (
+      <div>
+        {loading ? (
+          <p style={{ fontSize: '1.2rem', color: '#888' }}>
+            ⏳ 슬랭 불러오는 중...
+          </p>
+        ) : (
+          slangs.length > 0 && (
+            <SwipeCard
+              slang={slangs[0]}
+              onSwipe={handleSwipe}
+              onSwiped={fetchNextSlang}
+            />
+          )
+        )}
+        <div style={{ marginTop: '20px' }}>
+          <button
+            onClick={() => setQuizMode(true)}
+            style={{ marginRight: '10px' }}
+          >
+            🧠 퀴즈 모드
+          </button>
+          <button
+            onClick={() => setReviewMode(true)}
+            style={{ marginRight: '10px' }}
+          >
+            🔁 복습 모드
+          </button>
         </div>
-      )}
+      </div>
+    )}
 
-      <DownloadButton knownSlangs={knownSlangs} reviewSlangs={reviewSlangs} />
-    </div>
-  );
-};
+    <DownloadButton
+      knownSlangs={knownSlangs}
+      reviewSlangs={reviewSlangs}
+    />
+  </div>
+);
+
 
 export default App;
