@@ -17,6 +17,8 @@ const App = () => {
   const [quizMode, setQuizMode] = useState(false);
   const [reviewMode, setReviewMode] = useState(false);
   const [nickname, setNickname] = useState(localStorage.getItem('nickname') || '');
+  const [loading, setLoading] = useState(true); // 로딩 상태 추가
+
 
   console.log("🟢 App 시작됨");
   console.log("🟢 nickname:", nickname);
@@ -53,9 +55,12 @@ const App = () => {
   };
 
   useEffect(() => {
-    fetchInitialSlangs();
-    fetchStats();
-  }, [nickname]);
+  setLoading(true); // 슬랭 불러오기 전
+  fetchInitialSlangs();
+  fetchStats();
+  setLoading(false); // 슬랭 도착 후 바로 해제
+}, [nickname]);
+
 
   const handleSwipe = (direction, phrase) => {
     console.log(`👉 ${direction} swipe on "${phrase}"`);
@@ -92,12 +97,16 @@ const App = () => {
               <ReviewMode reviewSlangs={reviewSlangs} onExit={() => setReviewMode(false)}/>
           ) : (
               <div>
-                  {slangs.length > 0 && (
-                      <SwipeCard
-                          slang={slangs[0]}
-                          onSwipe={handleSwipe}
-                          onSwiped={fetchNextSlang}
-                      />
+                  {loading ? (
+                      <p style={{ fontSize: '1.2rem', color: '#888' }}>⏳ 슬랭 불러오는 중...</p>) :
+                      (
+                      slangs.length > 0 && (
+                          <SwipeCard
+                              slang={slangs[0]}
+                              onSwipe={handleSwipe}
+                              onSwiped={fetchNextSlang}
+                          />
+                      )
                   )}
                   <div style={{marginTop: '20px'}}>
                       <button onClick={() => setQuizMode(true)} style={{marginRight: '10px'}}>
