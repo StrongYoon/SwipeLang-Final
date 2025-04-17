@@ -7,7 +7,7 @@ import StatsPanel from './components/StatsPanel';
 import UserNickname from './components/UserNickname';
 import DownloadButton from './components/DownloadButton';
 import LevelBadge from './components/LevelBadge';
-import TreeStatus from './components/TreeStatus';
+import PetStatus from './components/PetStatus';
 import axios from 'axios';
 
 const App = () => {
@@ -91,11 +91,11 @@ const App = () => {
       minHeight: '100vh',
       padding: '30px',
       textAlign: 'center',
-      maxWidth: '480px',       // 👈 최대 너비 제한 (1/3 정도)
+      maxWidth: '600px',       // 👈 최대 너비 제한 (1/3 정도)
       margin: '0 auto'
     }}>
-      <h1 style={{fontSize: '2rem', marginBottom: '5px'}}>📚 SwipeLang</h1>
-      <TreeStatus count={knownSlangs.length}/>
+      <h1 style={{fontSize: '2.2rem', marginBottom: '5px'}}>📚 SwipeLang</h1>
+      <PetStatus count={knownSlangs.length} />
       <LevelBadge count={knownSlangs.length} />
       <StatsPanel known={knownSlangs.length} review={reviewSlangs.length} />
 
