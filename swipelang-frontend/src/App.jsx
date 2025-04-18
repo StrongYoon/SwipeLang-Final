@@ -90,7 +90,7 @@ const App = () => {
         margin: '0 auto'
       }}
     >
-      <h1 style={{ fontSize: '2.2rem', marginBottom: '3px' }}>📚 SwipeLang</h1>
+      <h1 style={{ fontSize: '2.2rem', marginBottom: '6px' }}>📚 SwipeLang</h1>
       <LevelBadge knowncount={knownSlangs.length} />
       <StatsPanel knowncount={knownSlangs.length} review={reviewSlangs.length} />
 
