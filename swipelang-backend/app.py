@@ -1,4 +1,4 @@
-    from flask import Flask, jsonify, request, send_file
+from flask import Flask, jsonify, request, send_file
 from utils.data_manager import load_slang_data, load_user_history, save_user_history, get_today_key
 from utils.quiz_generator import generate_quiz
 from utils.tts import speak
