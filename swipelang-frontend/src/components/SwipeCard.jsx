@@ -38,7 +38,7 @@ const SwipeCard = ({ slang, onSwipe, onSwiped }) => {
     if (onSwiped) onSwiped();
 
     // 피드백 1.2초 후 사라짐
-    setTimeout(() => setFeedback(''), 1200);
+    setTimeout(() => setFeedback(''), 2000);
   };
 
   const handlers = useSwipeable({
