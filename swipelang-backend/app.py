@@ -57,23 +57,61 @@ def get_review():
 
 @app.route("/slang/remember", methods=["POST"])
 def remember():
-    phrase = request.json.get("phrase")
+    data = request.json
+    phrase = data.get("phrase")
+    nickname = data.get("nickname")
+
+    if not phrase or not nickname:
+        return jsonify({"error": "phrase와 nickname이 필요합니다."}), 400
+
+    today = get_today_key()
+    if nickname not in history:
+        history[nickname] = {}
+    if today not in history[nickname]:
+        history[nickname][today] = {"known": [], "review": [], "viewed": []}
+
+    known_list = history[nickname][today]["known"]
+
+    if any(item["phrase"] == phrase for item in known_list):
+        return jsonify({"status": "이미 기억한 슬랭이에요!"}), 200
+
     matched = next((s for s in slangs if s["phrase"] == phrase), None)
-    if not matched:
-        return jsonify({"error": "슬랭을 찾을 수 없습니다."}), 404
-    history[today]["known"].append(matched)
-    save_user_history(history)
-    return jsonify({"status": "기억 완료"})
+    if matched:
+        known_list.append(matched)
+        save_user_history(history)
+        return jsonify({"status": "기억 완료"})
+    else:
+        return jsonify({"error": "해당 슬랭을 찾을 수 없어요"}), 404
+
 
 @app.route("/slang/repeat", methods=["POST"])
 def repeat():
-    phrase = request.json.get("phrase")
+    data = request.json
+    phrase = data.get("phrase")
+    nickname = data.get("nickname")
+
+    if not phrase or not nickname:
+        return jsonify({"error": "phrase와 nickname이 필요합니다."}), 400
+
+    today = get_today_key()
+    if nickname not in history:
+        history[nickname] = {}
+    if today not in history[nickname]:
+        history[nickname][today] = {"known": [], "review": [], "viewed": []}
+
+    review_list = history[nickname][today]["review"]
+
+    if any(item["phrase"] == phrase for item in review_list):
+        return jsonify({"status": "이미 복습에 등록되어 있어요!"}), 200
+
     matched = next((s for s in slangs if s["phrase"] == phrase), None)
-    if not matched:
-        return jsonify({"error": "슬랭을 찾을 수 없습니다."}), 404
-    history[today]["review"].append(matched)
-    save_user_history(history)
-    return jsonify({"status": "복습 등록 완료"})
+    if matched:
+        review_list.append(matched)
+        save_user_history(history)
+        return jsonify({"status": "복습 등록 완료"})
+    else:
+        return jsonify({"error": "해당 슬랭을 찾을 수 없어요"}), 404
+
 
 @app.route("/quiz")
 def quiz():
@@ -99,10 +137,6 @@ def tts():
     mp3_data = speak(phrase)
     return send_file(io.BytesIO(mp3_data), mimetype="audio/mpeg")
 
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
-
 @app.route("/debug")
 def debug():
     return jsonify({
@@ -110,3 +144,7 @@ def debug():
         "예시": slangs[:3],
         "오늘 viewed 수": len(history.get(today, {}).get("viewed", []))
     })
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
