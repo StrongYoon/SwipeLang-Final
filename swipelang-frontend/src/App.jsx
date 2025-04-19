@@ -63,28 +63,34 @@ const App = () => {
   }, [nickname]);
 
   // 스와이프 핸들러
-  const handleSwipe = (direction, phrase) => {
-    const url = direction === 'right' ? '/slang/remember' : '/slang/repeat';
+const handleSwipe = (direction, phrase) => {
+  // ✅ 안전 장치: phrase가 undefined이면 함수 바로 종료
+  if (!phrase || !phrase.phrase) {
+    console.warn("🚨 phrase가 undefined이거나 잘못된 구조입니다. 스와이프 무시!");
+    return;
+  }
 
-    console.log("📤 서버로 보내는 데이터:", {
-      direction,
-      phrase,
+  const url = direction === 'right' ? '/slang/remember' : '/slang/repeat';
+
+  console.log("📤 서버로 보내는 데이터:", {
+    direction,
+    phrase,
+    nickname
+  });
+
+  axios
+    .post(`https://swipelang-server4.onrender.com${url}`, {
+      phrase: phrase.phrase.trim(),
+      meaning: phrase.meaning,
+      example: phrase.example,
       nickname
-    });
-
-    axios
-      .post(`https://swipelang-server4.onrender.com${url}`, {
-        phrase: phrase.phrase,
-        meaning: phrase.meaning,
-        example: phrase.example,
-        nickname})
-      .then(async () => {
-        await fetchStats();
-        fetchNextSlang();
-      })
-      .catch(err => console.error('스와이프 처리 실패:', err));
-  };
-
+    })
+    .then(async () => {
+      await fetchStats();
+      fetchNextSlang();
+    })
+    .catch(err => console.error('스와이프 처리 실패:', err));
+};
   if (!nickname) {
     return <UserNickname onSave={setNickname} />;
   }

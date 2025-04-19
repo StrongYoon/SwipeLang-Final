@@ -111,7 +111,10 @@ def repeat():
     if any(item["phrase"] == phrase for item in review_list):
         return jsonify({"status": "이미 복습에 등록되어 있어요!"}), 200
 
-    matched = next((s for s in slangs if s["phrase"] == phrase), None)
+    matched = next(
+        (s for s in slangs if s["phrase"].strip().lower() == phrase.strip().lower()),
+        None
+    )
     if matched:
         review_list.append(matched)
         save_user_history(history)
