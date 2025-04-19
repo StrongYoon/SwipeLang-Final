@@ -8,7 +8,13 @@ def load_slang_data():
     csv_path = os.path.join(base_dir, '..', 'slang_data', 'slang_list.csv')
     print(f"▶ Loading CSV from: {csv_path}")
     print(f"▶ Exists? {os.path.exists(csv_path)}")
-    df = pd.read_csv(csv_path, encoding='utf-8')
+
+    try:
+        df = pd.read_csv(csv_path, encoding='utf-8')
+    except UnicodeDecodeError:
+        print("⚠️ UTF-8 인코딩 실패. CP949로 재시도합니다.")
+        df = pd.read_csv(csv_path, encoding='cp949')
+
     return [
         {
             "phrase": row["phrase"],
