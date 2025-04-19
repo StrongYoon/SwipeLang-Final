@@ -59,6 +59,8 @@ def get_review():
 def remember():
     data = request.json
     phrase = data.get("phrase")
+    meaning = data.get("meaning")
+    example = data.get("example")
     nickname = data.get("nickname")
 
     if not phrase or not nickname:
@@ -72,16 +74,21 @@ def remember():
 
     known_list = history[nickname][today]["known"]
 
+    # 이미 저장된 슬랭인지 확인 (phrase만 비교)
     if any(item["phrase"] == phrase for item in known_list):
         return jsonify({"status": "이미 기억한 슬랭이에요!"}), 200
 
-    matched = next((s for s in slangs if s["phrase"] == phrase), None)
-    if matched:
-        known_list.append(matched)
-        save_user_history(history)
-        return jsonify({"status": "기억 완료"})
-    else:
-        return jsonify({"error": "해당 슬랭을 찾을 수 없어요"}), 404
+    # 슬랭 전체 데이터 구성
+    slang_data = {
+        "phrase": phrase,
+        "meaning": meaning,
+        "example": example
+    }
+
+    known_list.append(slang_data)
+    save_user_history(history)
+
+    return jsonify({"status": "기억 완료"})
 
 
 @app.route("/slang/repeat", methods=["POST"])
