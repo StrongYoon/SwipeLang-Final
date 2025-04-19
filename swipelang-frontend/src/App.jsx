@@ -65,6 +65,13 @@ const App = () => {
   // 스와이프 핸들러
   const handleSwipe = (direction, phrase) => {
     const url = direction === 'right' ? '/slang/remember' : '/slang/repeat';
+
+    console.log("📤 서버로 보내는 데이터:", {
+      direction,
+      phrase,
+      nickname
+    });
+
     axios
       .post(`https://swipelang-server4.onrender.com${url}`, { phrase, nickname })
       .then(async () => {
