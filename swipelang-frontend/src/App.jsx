@@ -66,7 +66,7 @@ const App = () => {
   const handleSwipe = (direction, phrase) => {
     const url = direction === 'right' ? '/slang/remember' : '/slang/repeat';
     axios
-      .post(`https://swipelang-server4.onrender.com${url}`, { phrase, nickname })
+      axios.post(`https://swipelang-server4.onrender.com${url}`, { phrase, nickname })
       .then(async () => {
         await fetchStats();
         fetchNextSlang();

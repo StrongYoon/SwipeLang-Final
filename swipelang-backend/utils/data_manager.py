@@ -6,6 +6,8 @@ import pandas as pd
 def load_slang_data():
     base_dir = os.path.dirname(os.path.abspath(__file__))
     csv_path = os.path.join(base_dir, '..', 'slang_data', 'slang_list.csv')
+    print(f"▶ Loading CSV from: {csv_path}")
+    print(f"▶ Exists? {os.path.exists(csv_path)}")
     df = pd.read_csv(csv_path, encoding='utf-8')
     return [
         {
