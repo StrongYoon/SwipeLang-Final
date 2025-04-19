@@ -73,7 +73,11 @@ const App = () => {
     });
 
     axios
-      .post(`https://swipelang-server4.onrender.com${url}`, { phrase, nickname })
+      .post(`https://swipelang-server4.onrender.com${url}`, {
+        phrase: phrase.phrase,
+        meaning: phrase.meaning,
+        example: phrase.example,
+        nickname})
       .then(async () => {
         await fetchStats();
         fetchNextSlang();
